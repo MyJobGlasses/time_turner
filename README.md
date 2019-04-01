@@ -1,6 +1,6 @@
 # TimeTurner
 
-TimeTurner is a gem that generates random dates according to specific criteria.
+TimeTurner is a gem that generates random dates based on relative constraints.
 
 ## Installation
 
