@@ -1,6 +1,5 @@
-require "time_turner/version"
+require 'time_turner/generator'
 
 module TimeTurner
-  class Error < StandardError; end
-  # Your code goes here...
+  VERSION = "0.1.0"
 end
