@@ -1,0 +1,68 @@
+---
+require:
+  - rubocop-rspec
+AllCops:
+  TargetRubyVersion: 2.3
+  Exclude:
+    - 'vendor/**/*'
+    - 'spec/fixtures/**/*'
+    - 'tmp/**/*'
+Layout/AlignParameters:
+  # Customize to allow first parameter on same line
+  EnforcedStyle: with_fixed_indentation
+Layout/MultilineMethodCallBraceLayout:
+  EnforcedStyle: new_line
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
+Metrics/LineLength:
+  Max: 100
+Metrics/ModuleLength:
+  Exclude:
+    - 'spec/**/*.rb'
+Metrics/LineLength:
+  Max: 100
+Naming/MemoizedInstanceVariableName:
+  Severity: error
+Naming/PredicateName:
+  # Method define macros for dynamically generated method.
+  MethodDefinitionMacros:
+    - define_method
+    - define_singleton_method
+    - field
+RSpec/NestedGroups:
+  # Default of 3 is too hardcore, since there is user login, etc.)
+  Max: 5
+RSpec/ExampleLength:
+  # Default of 5 is too hardcore)
+  Max: 20
+RSpec/MultipleExpectations:
+  # We can use several expect not inside an aggregate failures to be used like rescue clause
+  # (eg intercept there is an included resource before mathcing the resource to a payload)
+  Max: 2
+
+Style/AndOr:
+  # Whether `and` and `or` are banned only in conditionals (conditionals)
+  # or completely (always).
+  EnforcedStyle: conditionals
+Style/CommentAnnotation:
+  Keywords:
+    - TODO
+    - TOTHINKABOUT
+    - TODO
+    - SECURITY
+    - FIXME
+    - OPTIMIZE
+    - HACK
+    - REVIEW
+Style/Copyright:
+  Notice: '^Copyright (\(c\) )?2[0-9]{3} .+'
+  AutocorrectNotice: 'Copyright (c) 2017-2018 My Job Glasses'
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma

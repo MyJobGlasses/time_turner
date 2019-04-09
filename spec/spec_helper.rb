@@ -1,5 +1,5 @@
-require "bundler/setup"
-require "time_turner"
+require 'bundler/setup'
+require 'time_turner'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
