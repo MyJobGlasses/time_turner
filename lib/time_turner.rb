@@ -6,6 +6,7 @@ class TimeTurner
   #
   # @return [Time]
   attr_reader :big_bang
+  attr_reader :generator
   attr_reader :log
 
   # Initialize TimeTurner pseudo-random generator with a seed value
